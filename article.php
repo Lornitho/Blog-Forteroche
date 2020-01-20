@@ -23,22 +23,10 @@ $billet =$bdd->query("SELECT  * FROM billet WHERE id=$id");
 $commentaires =$bdd->query("SELECT  * FROM commentaire WHERE idbillet=$id");
 
 while ($data =$billet->fetch()){
-  echo '<h2>' . $data['titre'].'</h2>'. $data['description'] .'<p>'. $data['dateAjout'].'<p>'; 
+  echo '<h2>' . $data['titre'].'</h2>'. $data['description'] .'<p>'. $data['dateAjout'].'<p>'.'<br><a href="create.php?edit='.$data['id'].'" >Editer</a></br>'
+ ;
 }
- while($comment =$commentaires->fetch()){
-    echo '<p>'. $comment['username']. '-' . $comment['datecomment'].'<p>'.'<p>' .  $comment['text'] .'</p>';
-}
-if (isset($_POST['Pseudo'])&& isset($_POST['message'])){
-    $Pseudo=$_POST['Pseudo'];
-    $message=$_POST['message'];
-    $req = $bdd->prepare('INSERT INTO commentaire(username, text, datecomment, idbillet) VALUES(:username, :text, NOW(), :idbillet)');
-    $req->execute(array(
-        'username' => $Pseudo,
-        'text' => $message,
-        'idbillet' => $id
-        ));
-        header('Location: article.php?id='.$id);
-}
+include ('model/commentModel.php');
 ?>
 <h2>commentaires</h2>
 <form class="col s12" method="POST" action="">
