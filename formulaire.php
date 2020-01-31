@@ -56,38 +56,25 @@ if(isset($erreur))
   echo '<font color="red">'.$erreur."</font>";
 }
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blog Jean Forteroche</title>
-<link rel ="icon" type="image/jpg" href ="writter.jpg"/>
-<!-- CSS  -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
 
-<form class="col s12" method="POST" action="">
+<form class="container col m12 s12" method="POST" action="">
   <div class="row">
-      <div class="input-field col s6">
-        <label for="first_name">Pseudo</label>
+      <div class="input-field col m10 s4">
+        <label for="first_name">Pseudo</label><br></br>
         <input  id="first_name" name="pseudo" type="text" class="validate">
       </div>
-      <div class="input-field col s6">
-        <label for="last_name">Mail</label>
+      <div class="input-field col m10 s4">
+        <label for="last_name">Mail</label><br></br>
         <input id="email" type="email" name="mail">
       </div>
-    <div class="input-field col s6">
-      <label for="last_name">Mot de passe</label>
+    <div class="input-field col m10 s4">
+      <label for="last_name">Mot de passe</label><br></br>
       <input id="password" type="password" name="password">
       </div>
     </div>
   </div>
   <input type="submit" id ="forminscription" class="btn btn-success mr-2 ml-2" value="Envoyer" name="forminscription">
-</form>
+</form><br></br>
 
 </body>
 </html>

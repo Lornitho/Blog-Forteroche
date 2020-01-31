@@ -1,48 +1,37 @@
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Blog Jean Forteroche</title>
-<link rel ="icon" type="image/jpg" href ="writter.jpg"/>
-<!-- CSS  -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
 <?php
+
 require_once('header.php');
 require_once('model/dbconnect.php');
-
-
-
-$id=$_GET['id'];
-$billet =$bdd->query("SELECT  * FROM billet WHERE id=$id");
-$commentaires =$bdd->query("SELECT  * FROM commentaire WHERE idbillet=$id");
-
-while ($data =$billet->fetch()){
-  echo '<h2>' . $data['titre'].'</h2>'. $data['description'] .'<p>'. $data['dateAjout'].'<p>'.'<br><a href="create.php?edit='.$data['id'].'" >Editer</a></br>'
- ;
-}
-include ('model/commentModel.php');
 ?>
-<h2>commentaires</h2>
-<form class="col s12" method="POST" action="">
+  <div class="container">
+    <div class="section">
       <div class="row">
-        <div class="input-field col s6">
+        <div class="col s12 m12">
+<?php
+require_once('model/articleModel.php');
+?>
+         </div>
+      </div>
+    </div>
+  </div>
+
+<form class=" container col m8 s12" method="POST" action=""><h5>Commentaires</h2>
+      <div class="row">
+        <div class="input-field col m6 s6 ">
           <label for="first_name">Pseudo</label>
           <input placeholder="Pseudo" id="first_name" name="Pseudo" type="text" class="validate">
         </div>
-        <div class="input-field col s6">
-          <label for="last_name">message</label>
+        <div class="input-field col m8 s6">
+          <label for="last_name">message</label><br></br>
           <textarea id="last_name" type="text" name="message"></textarea>
         </div>
       </div>
     </div>
   <input type="submit" id ="btninsert" class="btn btn-success mr-2 ml-2" value="Envoyer">
-</form>
+</form><br></br>
+<?php require_once('footer.php');
+?>
 
 </body>
 </html>
