@@ -16,11 +16,10 @@ if(isset($_POST['formconnect']))
     if($userexist == 1){
       $userinfo = $requser->fetch();
      
-      if($userinfo['password']==$passwordconnect){
+      if($userinfo['password']==sha1($passwordconnect)){
         $_SESSION['pseudo']=$pseudoconnect;
      
         header('Location: index.php');
-
       }
       
       

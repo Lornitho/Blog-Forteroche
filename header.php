@@ -24,7 +24,7 @@
 				<?php if($_SESSION['pseudo']==""){?>
 				<li><a href="connexion.php"><i class="material-icons left">cast_connected</i>Connexion</a></li>
 				<?php }else{ ?>
-				<li><a href="model/deconnexionModel.php"><i class="material-icons left">cast_connected</i>Deconnexion</a></li>
+				<li><a href="model/deconnexionModel.php"><i class="material-icons left">alarm_off</i>Deconnexion</a></li>
 				<?php } ?>
 			</ul>
 			
