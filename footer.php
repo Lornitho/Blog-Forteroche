@@ -1,7 +1,7 @@
-  <footer class="page-footer teal">
+  <footer class="page-footer teal darken-4">
       <div class="footer-copyright">
         <div class="container">
-          Copyright © <a class="brown-text text-lighten-3" href="http://materializecss.com">Jean Forteroche</a>
+          Copyright © <a class="brown-text text-lighten-3" href="contact.php">Jean Forteroche</a>
         </div>
       </div>
     </footer>

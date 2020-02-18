@@ -75,6 +75,7 @@ if(isset($erreur))
   </div>
   <input type="submit" id ="forminscription" class="btn btn-success mr-2 ml-2" value="Envoyer" name="forminscription">
 </form><br></br>
-
+<?php require_once('footer.php');
+?>
 </body>
 </html>

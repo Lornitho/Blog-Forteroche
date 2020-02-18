@@ -10,6 +10,8 @@ require_once('model/dbconnect.php');
         <div class="col s12 m12">
 <?php
 require_once('model/articleModel.php');
+require_once('model/reportModel.php');
+
 ?>
          </div>
       </div>

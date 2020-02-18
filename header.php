@@ -1,4 +1,10 @@
-<?php session_start();?>
+<?php session_start();
+/* creer une session vide uniquement si la session n'existe pas*/
+if(!$_SESSION['pseudo']){
+	$_SESSION['pseudo']=='';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
